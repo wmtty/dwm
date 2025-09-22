@@ -1,11 +1,11 @@
---- dwm.c
-+++ dwm.c
-@@ -205,6 +205,8 @@ static void setup(void);
- static void seturgent(Client *c, int urg);
- static void showhide(Client *c);
- static void sigchld(int unused);
-+static void sighup(int unused);
-+static void sigterm(int unused);
- static void spawn(const Arg *arg);
- static void tag(const Arg *arg);
- static void tagmon(const Arg *arg);
+--- dwm.c	2022-01-07 12:42:18.000000000 +0100
++++ dwm.c	2022-08-17 22:14:41.813809073 +0200
+@@ -1913,7 +1923,7 @@ updategeom(void)
+ 					m->clients = c->next;
+ 					detachstack(c);
+ 					c->mon = mons;
+-					attach(c);
++					attachbottom(c);
+ 					attachstack(c);
+ 				}
+ 				if (m == selmon)
