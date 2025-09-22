@@ -85,6 +85,13 @@ static Sp scratchpads[] = {
     {"stemacs", spcmd4}, {"schess", spcmd5},
 };
 
+static const char *tagsel[][2] = {
+   /*   fg         bg    */
+  { col_gray3, col_gray1 }, /* norm */
+  { col_gray4, col_cyan  }, /* sel */
+  { col_cyan,  col_gray1 }, /* occ but not sel */
+  { col_cyan,  col_gray3 }, /* has pinned tag */
+};
 /* tagging */
 static const char *tags[] = {"󰣨", "",  "", "", "",
                              "",  "󰭹", "", ""};
