@@ -33,7 +33,7 @@ static const char *fonts[] = {
     "JetBrainsMono Nerd Font Propo:size=9:style=Bold"};
 /* "ComicShannsMono Nerd Font Propo:size=10:style=Medium"}; */
 static const char dmenufont[] = "JetBrainsMono Nerd Font:size=9:style=Medium";
-#include "/home/ak/.config/suckless/dwm/themes/nord.h" /* Importing Theme */
+#include "/themes/nord.h" /* Importing Theme */
 static const char *colors[][3] = {
     /*               fg         bg         border   */
     [SchemeNorm] = {col_gray3, col_gray1, col_gray2},
