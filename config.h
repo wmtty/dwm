@@ -26,14 +26,14 @@ static const int showsystray = 1; /* 0 means no systray */
 static const int showbar = 1;     /* 0 means no bar */
 static const int topbar = 1;      /* 0 means bottom bar */
 static const char *fonts[] = {
-    /* "JetBrainsMono Nerd Font Propo:size=9:style=Medium"}; */
-    "ComicShannsMono Nerd Font Propo:size=10:style=Medium"};
+    "JetBrainsMono Nerd Font Propo:size=9:style=Medium"};
+// "ComicShannsMono Nerd Font Propo:size=10:style=Medium"};
 static const char dmenufont[] = "JetBrainsMono Nerd Font:size=9:style=Medium";
 #include "themes/nord.h" /* Importing Theme */
 static const char *colors[][3] = {
     /*               fg         bg         border   */
     [SchemeNorm] = {col_gray3, col_gray1, col_gray2},
-    [SchemeSel] = {col_gray1, col_cyan, col_cyan},
+    [SchemeSel] = {col_gray1, col_magenta, col_magenta},
 };
 
 typedef struct {
@@ -230,7 +230,7 @@ static const Key keys[] = {
     // &layouts[0]} },
     {MODKEY, XK_f, toggle_tile_float, {0}},
     {MODKEY, XK_m, toggle_tile_max, {0}},
-    { MODKEY|ShiftMask,                       XK_f,      setlayout,      {.v = &layouts[13]} },
+    {MODKEY | ShiftMask, XK_f, setlayout, {.v = &layouts[13]}},
     {MODKEY, XK_0, view, {.ui = ~0}},
     {MODKEY | ShiftMask, XK_0, tag, {.ui = ~0}},
     {MODKEY, XK_comma, focusmon, {.i = -1}},

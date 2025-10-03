@@ -5,3 +5,4 @@ static const char col_gray3[]       = "#E5E9F0";
 static const char col_gray4[]       = "#eceff4";
 // windowname
 static const char col_cyan[]        = "#5e81ac";
+static const char col_magenta[]        = "#B48EAD";
